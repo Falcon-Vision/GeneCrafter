@@ -1,0 +1,94 @@
+# This file is primarily used to tell git which files are "text" and which are "binary".
+# The "text" files are converted to LF in the repo's internal storage, while "binary" files are not modified.
+# When the repo is checked out to a working directory, Windows clients convert text files to CRLF and Linux clients keep them as LF - unless overridden in git client settings.
+
+# Some files - for example Linux shell scripts - must stay as LF even when checked out on Windows.
+# This is done by adding eol=lf attribute, see how it's done for *.sh extension below.
+
+# As an extra bonus, we're also setting custom diff filters for a few file types like C#, CSS, and HTML.
+# These filters are built into git and improve the way the diffs are displayed on command-line.
+
+# Auto-detect binary vs text by looking for \0 in the first 1000 bytes of the file (and a few other clues). Does not always work.
+*                text=auto
+
+# The following settings override the above default for known file extensions.
+.babelrc         text
+*.cache          binary
+*.ccproj         text
+*.cer            binary
+*.cmd            text
+*.Config         text
+*.config         text
+*.cs             text        diff=csharp
+*.cscfg          text
+*.csdef          text
+*.cshtml         text
+*.csproj         text
+*.css            text        diff=css
+*.csv            text
+*.conf           text
+*.database       text
+*.dll            binary
+*.DotSettings    text
+*.dtproj         text
+*.dtsx           text
+.editorconfig    text
+*.ejs            text
+.eslintrc        text
+*.exe            binary
+*.eot            binary
+*.gif            binary
+.gitattributes   text
+.gitignore       text
+*.gz             binary
+*.html           text        diff=html
+*.ico            binary
+*.jks            binary
+*.jpg            binary
+*.js             text
+*.json           text
+*.kproj          text
+*.md             text        diff=markdown
+.npmrc           text
+*.params         text
+*.pem            text
+*.pdb            binary
+*.png            binary
+.prettierignore  text
+.prettierrc      text
+*.proj           text
+*.properties     text
+*.props          text
+*.ps1            text
+*.psm1           text
+*.resx           text
+*.rsp            text
+*.ruleset        text
+*.runsettings    text
+*.scss           text
+*.settings       text
+*.Settings       text
+*.sh             text        diff=bash            eol=lf
+*.sln            text
+*.svg            text
+*.targets        text
+*.template       text
+*.testsettings   text
+.tfignore        text
+*.ts             text
+*.ttf            binary
+*.txt            text
+*.user           text
+*.vspscc         text
+*.wadcfgx        text
+*.woff           binary
+*.woff2          binary
+*.xaml           text
+*.xlf            text
+*.xml            text
+*.xproj          text
+*.xsd            text
+*.xyz            text
+*.yaml           text
+*.yml            text
+*.zip            binary
