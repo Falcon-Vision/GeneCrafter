@@ -1,0 +1,29 @@
+name: 'Enforce Branch Rule'
+
+on:
+  pull_request:
+
+jobs:
+  Branch-Protection:
+    runs-on: ubuntu-latest
+    steps:
+     - name: Check Ref Branch Name
+       id: is-stage-branch
+       run: |
+          if [[ "${{github.head_ref}}" =~ "stage" ]] ;then
+              echo "match=true" >> "$GITHUB_OUTPUT"
+          else
+              echo "match=false" >> "$GITHUB_OUTPUT"
+          fi
+       shell: bash
+       
+     - name: Is stage branch
+       run: |
+          echo "${{ steps.is-stage-branch.outputs.match }}"
+       shell: bash
+       
+     - name: Branch Protection
+       if: ${{ (github.base_ref == 'main') && (steps.is-stage-branch.outputs.match == 'false') }}
+       run: |
+         echo "ERROR: Only pull requests made from the "stage" branch can be used to update the "main" branch."
+          exit 1

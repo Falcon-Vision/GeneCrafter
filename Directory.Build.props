@@ -1,5 +1,12 @@
 <Project>
-  <PropertyGroup>
-    <LangVersion>11</LangVersion>
-  </PropertyGroup>
+	<PropertyGroup>
+		<LangVersion>11</LangVersion>
+		<dotNetTFM>net8.0</dotNetTFM>
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+		<GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
+		<BaseOutputPath>$(SolutionDir)\.artifacts\_Bin\$(MSBuildProjectName)\</BaseOutputPath>
+		<BaseIntermediateOutputPath>$(SolutionDir)\.artifacts\_Obj\$(MSBuildProjectName)\</BaseIntermediateOutputPath>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<DocumentationFile>$(SolutionDir)\Documentation\$(MSBuildProjectName).xml</DocumentationFile>
+	</PropertyGroup>
 </Project>

@@ -1,0 +1,46 @@
+on:
+  workflow_dispatch:
+     inputs:
+       releaseType:
+           description: 'Release type'
+           required: true
+           default: 'minor'
+           type: choice
+           options: 
+              - major
+              - minor
+              - patch
+       versionNumber:
+            description: 'Version number'
+            required: true
+            type: string
+       Change_request:
+        description: 'Change Request Number(CM)'
+        required: true
+        type: string
+       notes:
+        description: 'notes'
+        required: true
+        default: 'new release'
+        type: string
+
+name: Create Release
+
+jobs:
+  build:
+    name: Create Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+        with:
+          tag_name: ${{ github.event.inputs.versionNumber }}
+          release_name: ${{ github.event.inputs.versionNumber }}-${{ github.event.inputs.releaseType }}
+          body:  "${{ github.event.inputs.notes }} \r\n ${{ github.event.inputs.Change_request }}"
+          draft: false
+          prerelease: false
