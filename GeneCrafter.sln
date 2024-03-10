@@ -3,27 +3,70 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GeneCrafters.Test", "GeneCrafters.Test\GeneCrafters.Test.vcxproj", "{D9B8C71F-2B1A-48C4-AFE8-8F94E70B1029}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".SolutionItems", ".SolutionItems", "{B5F54E1A-7353-47B7-A946-F575F9BF0121}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		CodeMaid.config = CodeMaid.config
+		Directory.Build.props = Directory.Build.props
+		Directory.Packages.props = Directory.Packages.props
+		README.md = README.md
+		visual studio 2022.vssettings = visual studio 2022.vssettings
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{A31824C4-2E46-4B04-B620-F7150B88E890}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\blank.yml = .github\workflows\blank.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "git", "git", "{60958A3E-AF12-463B-BEFC-A9B7B3BA4606}"
+	ProjectSection(SolutionItems) = preProject
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Iac", "Iac", "{B7A8D5F6-52DE-4BBF-9BC2-1BBE2FCF1DC1}"
+	ProjectSection(SolutionItems) = preProject
+		.Iac\Automations\Iac.ape.json = .Iac\Automations\Iac.ape.json
+		.Iac\Automations\Iac.dev.json = .Iac\Automations\Iac.dev.json
+		.Iac\Automations\Iac.prod.json = .Iac\Automations\Iac.prod.json
+		.Iac\Automations\Iac.ps1 = .Iac\Automations\Iac.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{72E1B9F0-E2E7-4ED6-A8C1-7100718381C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeneCrafter.AppConfig", "src\Common\GeneCrafter.AppConfig\GeneCrafter.AppConfig.csproj", "{69B1A82F-E7F7-40CA-A791-37E399CA48B0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AppConfig", "AppConfig", "{52EE4334-31C2-4382-9DCB-E4ABD488E054}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{63911201-67DB-4669-9009-2C56953744A6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Interface", "Interface", "{ED492CD6-3D0B-44C9-9A2B-6B9D8E4096A0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{0F6D6E4F-66C1-4030-88C5-94BBC216A451}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|x64 = Debug|x64
-		Debug|x86 = Debug|x86
-		Release|x64 = Release|x64
-		Release|x86 = Release|x86
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D9B8C71F-2B1A-48C4-AFE8-8F94E70B1029}.Debug|x64.ActiveCfg = Debug|x64
-		{D9B8C71F-2B1A-48C4-AFE8-8F94E70B1029}.Debug|x64.Build.0 = Debug|x64
-		{D9B8C71F-2B1A-48C4-AFE8-8F94E70B1029}.Debug|x86.ActiveCfg = Debug|Win32
-		{D9B8C71F-2B1A-48C4-AFE8-8F94E70B1029}.Debug|x86.Build.0 = Debug|Win32
-		{D9B8C71F-2B1A-48C4-AFE8-8F94E70B1029}.Release|x64.ActiveCfg = Release|x64
-		{D9B8C71F-2B1A-48C4-AFE8-8F94E70B1029}.Release|x64.Build.0 = Release|x64
-		{D9B8C71F-2B1A-48C4-AFE8-8F94E70B1029}.Release|x86.ActiveCfg = Release|Win32
-		{D9B8C71F-2B1A-48C4-AFE8-8F94E70B1029}.Release|x86.Build.0 = Release|Win32
+		{69B1A82F-E7F7-40CA-A791-37E399CA48B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69B1A82F-E7F7-40CA-A791-37E399CA48B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69B1A82F-E7F7-40CA-A791-37E399CA48B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69B1A82F-E7F7-40CA-A791-37E399CA48B0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A31824C4-2E46-4B04-B620-F7150B88E890} = {60958A3E-AF12-463B-BEFC-A9B7B3BA4606}
+		{60958A3E-AF12-463B-BEFC-A9B7B3BA4606} = {B5F54E1A-7353-47B7-A946-F575F9BF0121}
+		{B7A8D5F6-52DE-4BBF-9BC2-1BBE2FCF1DC1} = {B5F54E1A-7353-47B7-A946-F575F9BF0121}
+		{69B1A82F-E7F7-40CA-A791-37E399CA48B0} = {52EE4334-31C2-4382-9DCB-E4ABD488E054}
+		{52EE4334-31C2-4382-9DCB-E4ABD488E054} = {72E1B9F0-E2E7-4ED6-A8C1-7100718381C7}
+		{63911201-67DB-4669-9009-2C56953744A6} = {72E1B9F0-E2E7-4ED6-A8C1-7100718381C7}
+		{ED492CD6-3D0B-44C9-9A2B-6B9D8E4096A0} = {72E1B9F0-E2E7-4ED6-A8C1-7100718381C7}
+		{0F6D6E4F-66C1-4030-88C5-94BBC216A451} = {72E1B9F0-E2E7-4ED6-A8C1-7100718381C7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E30AB923-CE8A-489A-A4CD-B495E7B1E8B1}
