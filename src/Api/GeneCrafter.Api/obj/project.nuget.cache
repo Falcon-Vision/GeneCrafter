@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "Jb2+LFG8pOsTXceq9JfXIFTZWxeqmCmahuWct1idrCIm+KxBEhSLlNB/C7cLCU7OHsXOEv1k1l9qODTZTB4hfQ==",
+  "success": false,
+  "projectFilePath": "D:\\Git\\orgs\\Vihaswi\\GeneCrafter\\src\\Api\\GeneCrafter.Api\\GeneCrafter.Api.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1105",
+      "level": "Error",
+      "message": "Unable to read project information for 'GeneCrafter.Api': Invalid framework identifier ''."
+    }
+  ]
+}

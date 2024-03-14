@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\GeneCrafter.Models\GeneCrafter.Models.csproj" />
+    <ProjectReference Include="..\GeneCrafter.Utility\GeneCrafter.Utility.csproj" />
   </ItemGroup>
 
 </Project>

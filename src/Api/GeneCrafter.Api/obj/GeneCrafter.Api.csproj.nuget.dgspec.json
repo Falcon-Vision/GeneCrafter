@@ -1,0 +1,31 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Git\\orgs\\Vihaswi\\GeneCrafter\\src\\Api\\GeneCrafter.Api\\GeneCrafter.Api.csproj": {}
+  },
+  "projects": {
+    "D:\\Git\\orgs\\Vihaswi\\GeneCrafter\\src\\Api\\GeneCrafter.Api\\GeneCrafter.Api.csproj": {
+      "restore": {
+        "projectUniqueName": "D:\\Git\\orgs\\Vihaswi\\GeneCrafter\\src\\Api\\GeneCrafter.Api\\GeneCrafter.Api.csproj",
+        "projectPath": "D:\\Git\\orgs\\Vihaswi\\GeneCrafter\\src\\Api\\GeneCrafter.Api\\GeneCrafter.Api.csproj",
+        "packagesPath": "D:\\Cache\\NuGetCache",
+        "outputPath": "D:\\Git\\orgs\\Vihaswi\\GeneCrafter\\src\\Api\\GeneCrafter.Api\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\veere\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "D:\\Cache\\NuGetCache": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet8/nuget/v3/index.json": {}
+        }
+      }
+    }
+  }
+}

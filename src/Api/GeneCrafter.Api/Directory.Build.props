@@ -1,0 +1,16 @@
+<Project>
+  <Import Project="$([MSBuild]::GetPathOfFileAbove(Directory.Build.props,$(MSBuildThisFileDirectory)..\))" />
+  <PropertyGroup></PropertyGroup>
+
+  <!--<ItemGroup>
+    <Reference Include="@(HariComponentReference)">
+      <HintPath>"..\..\..\..\..\..\..\Cache\.artifacts\_Obj\%(HariComponentReference.Identity)\Debug\net7.0\%(HariComponentReference.Identity).dll"</HintPath>
+    </Reference>
+  </ItemGroup>-->
+
+  <ItemGroup>
+    <Reference Include="..\..\..\..\..\..\..\Cache\.artifacts\_Obj\%(HariComponentReference.Identity)\Debug\net7.0\%(HariComponentReference.Identity).dll">
+    </Reference>
+  </ItemGroup>
+
+</Project>
